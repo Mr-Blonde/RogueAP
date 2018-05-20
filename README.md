@@ -2,6 +2,7 @@
 
 RogueAP for ESP32
 
+For more info check: [RogueAP Wiki](../../wiki)
 
 
 ## requires
