@@ -1,6 +1,8 @@
 # RogueAP for ESP32
 The roge access point software uses the ESP32's capability to function as an access point. It sets an configurable SSID and upon a client associating with the AP, the software redirects any HTTP query (through DNS redirection) to a portal website. The portal webpage can be customized to mimic a website where the user has to enter credentials in order to proceed. Once, credentials have been send by the user, they are stored in the ESP32's flash memory and an error message is displayed to the user.
 
+![LOLIN32 with small powerbank](https://i.paste.pics/34bbada6f6581ea72574fe52b1437838.png)
+
 For more info check: [RogueAP Wiki](../../wiki)
 
 ### DISCLAIMER
